@@ -1,0 +1,32 @@
+html {
+	overflow-x: hidden;
+}
+body{
+	font-family: ProximaNova !important;
+	font-weight: 250;
+	overflow-x: hidden;
+	background-size: 100%;
+	color: white;
+}
+h2 {
+	text-align: center;
+	font-size: 6vh;
+	color: white;
+	text-decoration: underline;
+}
+
+h3{
+	font-size: 4vh;
+}
+
+.left {
+	text-align: right;
+}
+.right {
+	text-align: left;
+}
+.main {
+	margin-top: 5vh;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 4vh;
+}
