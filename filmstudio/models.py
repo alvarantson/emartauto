@@ -16,7 +16,7 @@ class filmstudio_lang(models.Model):
 
 class filmstudio_img(models.Model):
 	name = models.CharField("pildi nimi",max_length=999)
-	img = models.ImageField()
+	img = models.ImageField(blank=True)
 	def __str__(self):
 		return self.name
 

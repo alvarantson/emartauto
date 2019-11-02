@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'foodstore',
     'filmstudio',
     'menu',
+    'repair',
+    'loader',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

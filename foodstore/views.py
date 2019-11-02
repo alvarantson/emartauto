@@ -13,16 +13,24 @@ def foodstore(request):
 		if request.POST['submit-btn'] == 'lang':
 			request.session['lang'] = request.POST['langselect']
 			return HttpResponseRedirect('/foodstore') #INDEX\i puhul '/'
-	ad2 = []
-	for nr in range(len(ad.objects.all())):
-		ad2.append(nr)
+	
+	menuu = []
+	hetkel = ""
+	asd = []
+	for i in menu.objects.filter(lang=request.session['lang']):
+		asd.append(i)
+	asd = sorted(asd, key=lambda k: k.item_cat) 
+	for i in asd:
+		if hetkel != i.item_cat:
+			hetkel = i.item_cat
+			menuu.append({"item_cat":"KATEGOORIA","item_name":hetkel,"item_price":""})
+		menuu.append(i)
+
 	return render(request, 'foodstore.html', context={
 		'contact':contact.objects.all()[0],
 		'navbar_lang':navbar_lang.objects.get(lang=request.session['lang']),
 		'flags':flags,
 		'lang': foodstore_lang.objects.get(lang=request.session['lang']),
-		'menu': menu.objects.filter(lang=request.session['lang']),
-		'ads':ad.objects.all(),
-		'ads2':ad2,
+		'menu': menuu,
 		'social_media':social_media.objects.all()
 		})

@@ -9,6 +9,7 @@
 </head>
 {% include "navbar/navbar.html" %}
 
+<div class="col-xs-12 foodstore-bg"><img src="{{ lang.bg_img.url }}"></div>
 <!-- foodstore -->
 <div class="col-xs-12 col-lg-2"></div>
 <div class="col-xs-12 col-lg-8 ">
@@ -24,14 +25,24 @@
 					<th>{{ lang.table_field2 }}</th>
 				</tr>
 				{% for item in menu %}
-				<tr>
-					<td>{{ item.item_name }}</td>
-					<td>{{ item.item_price }} €</td>
-				</tr>
+					{% if item.item_cat == "KATEGOORIA" %}
+					<tr>
+						<td style="text-align: center;"><b>{{ item.item_name }}</b></td>
+						<td></td>
+					</tr>
+					{% else %}
+					<tr>
+						<td>{{ item.item_name }}</td>
+						{% if i.item_price == "" %}
+						<td></td>
+						{% else %}
+						<td>{{ item.item_price }} €</td>
+						{% endif %}
+					</tr>
+					{% endif %}
 				{% endfor %}
 			</table>
 		</div>
-		<h3><a href="/meist">{{ lang.book }}</a></h3>
 	</div>
 </div>
 	<div class="col-xs-12 col-lg-2"></div>

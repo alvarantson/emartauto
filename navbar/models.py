@@ -22,6 +22,7 @@ class navbar_lang(models.Model):
 	browser = models.CharField(max_length=15, blank=True)
 	food_store = models.CharField(max_length=15, blank=True)
 	film_studio = models.CharField(max_length=15, blank=True)
+	repair = models.CharField(max_length=15, blank=True)
 	navigation = models.CharField(max_length=15, blank=True)
 	open_hours = models.CharField(max_length=15, blank=True)
 	def __str__(self):
@@ -34,13 +35,13 @@ class langs(models.Model):
 		return self.lang
 
 class ad(models.Model):
-	url = models.CharField("1800x400",max_length=999)
-	img = models.ImageField()
+	url = models.CharField("1800x400",max_length=999, blank=True)
+	img = models.ImageField(blank=True)
 	def __str__(self):
 		return self.url
 
 class social_media(models.Model):
-	url = models.CharField(max_length=999)
-	icon = models.CharField(max_length=20)
+	url = models.CharField(max_length=999, blank=True)
+	icon = models.CharField(max_length=20, blank=True)
 	def __str__(self):
 		return self.url + ' - ' + self.icon

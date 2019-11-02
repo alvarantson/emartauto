@@ -8,6 +8,6 @@ class menu_lang(models.Model):
 
 class menu_items(models.Model):
 	item = models.CharField(max_length=99, unique=True)
-	price = models.CharField(max_length=3, blank=True)
+	price = models.CharField(max_length=9, blank=True)
 	def __str__(self):
 		return self.item

@@ -4,6 +4,7 @@ from django.db import models
 
 class foodstore_lang(models.Model):
 	lang = models.CharField(max_length=3, unique=True)
+	bg_img = models.ImageField(blank=True)
 	header = models.CharField(max_length=99, blank=True)
 	text = models.TextField(blank=True)
 	menu = models.CharField(max_length=99, blank=True)
@@ -16,7 +17,8 @@ class foodstore_lang(models.Model):
 
 class menu(models.Model):
 	lang = models.CharField(max_length=3)
+	item_cat = models.CharField(max_length=99, blank=True)
 	item_name = models.CharField(max_length=99, blank=True)
-	item_price = models.CharField(max_length=3, blank=True)
+	item_price = models.CharField(max_length=9, blank=True)
 	def __str__(self):
-		return self.lang + " - " +self.item_name
+		return self.lang + " - " +self.item_cat + " - " +self.item_name
