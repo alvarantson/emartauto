@@ -22,7 +22,7 @@
 	<div class="carousel-inner">
 		{% for ad in ads %}
 		<div class="item{% if ad == ads.0 %} active{% endif %}">
-			<a href="{{ ad.url }}">
+			<a href="{{ ad.url }}" target="_blank">
 				<img src="{{ ad.img.url }}" alt="Advertisment">
 			</a>
 		</div>
