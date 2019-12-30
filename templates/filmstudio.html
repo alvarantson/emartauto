@@ -18,9 +18,23 @@
 		<p>{{ lang.text|linebreaks }}</p>
 		<div class="col-xs-12 filmstudio-gallery">
 			{% for i in img %}
+			{% spaceless %}
 			<div class="col-xs-12 col-lg-3">
-				<img src="{{ i.img.url }}">
+				<img src="{{ i.img.url }}" id="{{ i.name }}">
 			</div>
+			
+			<div class="popup" id="{{ i.name }}-popup">
+				<img src="{{ i.img.url }}"id="{{ i.name }}-img">
+			</div>
+			<script type="text/javascript">
+				$("#{{ i.name }}").click(function() {
+					$("#{{ i.name }}-popup").fadeIn(500);
+				});
+				$("#{{ i.name }}-popup").click(function() {
+					$("#{{ i.name }}-popup").fadeOut(500);
+				});
+			</script>
+			{% endspaceless %}
 			{% endfor %}
 		</div>
 		<div class="col-xs-12 filmstudio-table">
@@ -38,6 +52,18 @@
 				</tr>
 				{% endfor %}
 			</table>
+		</div>
+		<h3>{{ lang.videos }}</h3>
+		<div class="col-xs-12 videos">
+			{% for i in videos %}
+			<div class="col-xs-12 video">
+				<!--
+				<h4>{{ i.name }}</h4>
+				-->
+				<iframe width="420" height="216" src="{{ i.url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</iframe>
+			</div>
+			{% endfor %}
 		</div>
 		<h3><a href="/meist"><u>{{ lang.book }}</u></a></h3>
 	</div>

@@ -47,11 +47,9 @@ body{
 
 /* Desktop navbar */
 	.navbar-desktop{
-		height: 5vh;
+		height: 4vh;
 		width: 100vw;
-		border-radius: 0 0 
-
-		0 0;
+		border-radius: 0 0 0 0;
 	}
 	.navbar-desktop__logo{
 		position: fixed;
@@ -63,7 +61,8 @@ body{
 		text-align: right;
 	}
 	.navbar-desktop__info h3{
-		margin-top: 0.75vh;
+		margin-top: 1.25vh;
+		margin-bottom: 0.75vh;
 	}
 	.navbar-desktop__info h3 sup{
 		font-size: 1.6vh;

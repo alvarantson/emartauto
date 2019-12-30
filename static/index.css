@@ -4,6 +4,7 @@
 	}
 	.carousel-inner img{
 		width: 100vw !important;
+		margin-top: 0.5vh;
 	}
 	.carousel-control {
 		margin-top: 5vh;
@@ -25,7 +26,7 @@
 
 	.carousel-bottom {
 		position: absolute;
-		top: 19.5vw;
+		top: 19.4vw;
 		margin-top: 5vh;
 	}
 	.carousel-bottom__triangle{

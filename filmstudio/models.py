@@ -10,6 +10,7 @@ class filmstudio_lang(models.Model):
 	table_field1 = models.CharField(max_length=999, blank=True)
 	table_field2 = models.CharField(max_length=999, blank=True)
 	table_field3 = models.CharField(max_length=999, blank=True)
+	videos = models.CharField(max_length=999, blank=True)
 	book = models.CharField(max_length=999, blank=True)
 	def __str__(self):
 		return self.lang
@@ -20,6 +21,11 @@ class filmstudio_img(models.Model):
 	def __str__(self):
 		return self.name
 
+class filmstudio_vid(models.Model):
+	name = models.CharField("video nimi",max_length=999)
+	url = models.CharField("video link",max_length=999)
+	def __str__(self):
+		return self.name
 
 class filmstudio_inventory(models.Model):
 	item = models.CharField(max_length=99, unique=True, blank=True)

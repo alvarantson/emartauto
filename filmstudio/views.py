@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from navbar.models import contact, navbar_lang, langs, ad, social_media
-from .models import filmstudio_lang, filmstudio_img, filmstudio_inventory
+from .models import filmstudio_lang, filmstudio_img, filmstudio_inventory, filmstudio_vid
 # Create your views here.
 def filmstudio(request):
 	if 'lang' not in request.session:
@@ -25,5 +25,6 @@ def filmstudio(request):
 		'inventory': filmstudio_inventory.objects.all(),
 		'ads':ad.objects.all(),
 		'ads2':ad2,
-		'social_media':social_media.objects.all()
+		'social_media':social_media.objects.all(),
+		'videos': filmstudio_vid.objects.all()
 		})
