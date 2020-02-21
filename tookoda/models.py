@@ -11,3 +11,7 @@ class tookoda_entry(models.Model):
 	teostav_too = models.TextField()
 	mured_kommentaarid = models.TextField()
 	kes_tegi = models.CharField(max_length=999)
+
+	
+class google_link(models.Model):
+	link = models.CharField(max_length=999)

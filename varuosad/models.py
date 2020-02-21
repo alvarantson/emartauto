@@ -19,3 +19,7 @@ class varuosad_entry(models.Model):
 
 	def __str__(self):
 		return self.nr +' - '+self.nimi+' - '+self.aeg+' - '+self.kes_tegi
+
+		
+class google_link(models.Model):
+	link = models.CharField(max_length=999)
