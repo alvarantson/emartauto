@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^filmstudio', include('filmstudio.urls')),
     url(r'^varuosad', include('varuosad.urls')),
     url(r'^kalender', include('kalender.urls')),
+    url(r'^kalender2', include('kalender2.urls')),
     url(r'^reklaam', include('reklaam.urls')),
     url(r'^menu', include('menu.urls')),
     url(r'^repair', include('repair.urls')),

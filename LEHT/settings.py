@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'tookoda',
     'varuosad',
     'kalender',
+    'kalender2',
     'index',
     'navbar',
     'meist',
