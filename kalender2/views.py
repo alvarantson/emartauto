@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-#from .models import google_link
+from .models import google_link
 from login.models import worker
 # Create your views here.
 def kalender2(request):
@@ -42,5 +42,5 @@ def kalender2(request):
 
 	return render(request, 'kalender.html', context={
 #		'items':kalender_entry.objects.all().reverse()
-#		'link':google_link.objects.first()
+		'link':google_link.objects.first()
 		})
