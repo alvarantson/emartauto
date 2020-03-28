@@ -23,8 +23,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('index.urls')),
-    url(r'^browser/', include('browser.urls')),
+    url(r'^browser', include('browser.urls')),
     url(r'^meist', include('meist.urls')),
+    url(r'^hinnasilt', include('hinnasilt.urls')),
     url(r'^login', include('login.urls')),
     url(r'^tookoda', include('tookoda.urls')),
     url(r'^foodstore', include('foodstore.urls')),

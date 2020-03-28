@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'reklaam',
+    'hinnasilt',
     'login',
     'tookoda',
     'varuosad',
