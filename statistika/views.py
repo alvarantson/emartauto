@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from .models import statistics_entry
 # Create your views here.
 def statistika(request):
-	if not request.user.is_authenticated():
+	if not request.user.is_authenticated:
 		return HttpResponseRedirect("/admin")
 
 	apps = statistics_entry.objects.order_by().values('appname').distinct()
