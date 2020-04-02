@@ -6,11 +6,13 @@
     <title>{{ contact.name }}</title>
 
 	<link rel="stylesheet" type="text/css" href="{% static "table.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "backend.css" %}">
 </head>
 <body>
 {% include "navbar/navbar.html" %}
 
 <div class="col-xs-12 main">
+	<h4><a href="/">Tagasi pealehele</a></h4>
 	<form method="POST"> {% csrf_token %}
 		<input type="text" name="name" placeholder="kasutajanimi"><br>
 		<input type="password" name="password" placeholder="******"><br>

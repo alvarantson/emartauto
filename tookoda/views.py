@@ -2,14 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import tookoda_entry, google_link
 from login.models import worker
+from login.views import is_worker
 # Create your views here.
 def tookoda(request):
-	try:
-		request.session['kalender_priority'] = worker.objects.get(name=request.session['worker']).kalender_priority
-		request.session['varuosad_priority'] = worker.objects.get(name=request.session['worker']).varuosad_priority
-		request.session['tookoda_priority'] = worker.objects.get(name=request.session['worker']).tookoda_priority
-	except:
-		return HttpResponseRedirect('/login') #INDEX\i puhul '/'
+	is_worker(request)
 
 
 #	if bool(request.POST) == True:

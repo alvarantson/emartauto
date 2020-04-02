@@ -5,9 +5,13 @@
 	<meta charset="utf-8">
 	<title>{{ contact.name }}</title>
 
-	<link rel="stylesheet" type="text/css" href="{% static "table.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "login.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "backend.css" %}">
 </head>
 <body>
+	<div class="absolute">
+		<h4>Sisselogitud: <b>{{ logged_in }}</b></h4>
+	</div>
 	{% include "navbar/navbar.html" %}
 	<div class="main col-xs-12">
 		<div class="col-xs-6 workers">
@@ -40,6 +44,10 @@
 				<a href="/hinnasilt">hinnasilt</a><br>
 				<a href="/menu">menüü</a><br>
 				<a href="/loader">Lae andmeid sisse</a><br>
+				<br>
+				{% if request.user.is_superuser %}
+					<a href="/statistics">statistika</a><br>
+				{% endif %}
 			</h1>
 
 		</div>

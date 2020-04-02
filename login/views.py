@@ -4,6 +4,13 @@ from .models import worker
 from meist.models import contactform
 from django.contrib.auth.models import User
 # Create your views here.
+def is_worker(request):
+	try:
+		request.session['kalender_priority'] = worker.objects.get(name=request.session['worker']).kalender_priority
+		request.session['varuosad_priority'] = worker.objects.get(name=request.session['worker']).varuosad_priority
+		request.session['tookoda_priority'] = worker.objects.get(name=request.session['worker']).tookoda_priority
+	except:
+		return HttpResponseRedirect('/login') #INDEX\i puhul '/'
 def login(request):
 	if bool(request.POST) == True:
 		if request.POST['submit-btn'] == 'login':
@@ -21,7 +28,7 @@ def login(request):
 	if request.user.is_superuser:
 		request.session['worker'] = "admin"
 	try:
-		return render(request,'login-hub.html',context={"mails":contactform.objects.all(), "workers":worker.objects.all(), "superusers":User.objects.all()})
+		return render(request,'login-hub.html',context={"mails":contactform.objects.all(), "workers":worker.objects.all(), "superusers":User.objects.all(), "logged_in":request.session["worker"]})
 	except:
 		pass
 

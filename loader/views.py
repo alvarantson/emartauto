@@ -4,6 +4,7 @@ from login.models import worker
 from filmstudio.models import filmstudio_inventory
 from repair.models import menu as repair_menu
 from foodstore.models import menu as foodstore_menu
+from login.views import is_worker
 # Create your views here.
 def lister(text):
 	listing = []
@@ -16,12 +17,7 @@ def lister(text):
 	return listing
 
 def loader(request):
-	try:
-		request.session['kalender_priority'] = worker.objects.get(name=request.session['worker']).kalender_priority
-		request.session['varuosad_priority'] = worker.objects.get(name=request.session['worker']).varuosad_priority
-		request.session['tookoda_priority'] = worker.objects.get(name=request.session['worker']).tookoda_priority
-	except:
-		return HttpResponseRedirect('/login') #INDEX\i puhul '/'
+	is_worker(request)
 
 	if request.POST:
 		items = lister(request.POST["sisu"])
