@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from navbar.models import contact, navbar_lang, langs, ad, social_media
 from .models import foodstore_lang, menu
-#from statistika.views import collect_statistics
+from statistika.views import collect_statistics
 # Create your views here.
 def foodstore(request):
-#	collect_statistics(request, "foodstore")
+	collect_statistics(request, "foodstore")
 	if 'lang' not in request.session:
 		request.session['lang'] = 'est'
 	flags = []

@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from navbar.models import contact, navbar_lang, langs, ad, social_media
 from .models import filmstudio_lang, filmstudio_img, filmstudio_inventory, filmstudio_vid
-#from statistika.views import collect_statistics
+from statistika.views import collect_statistics
 # Create your views here.
 def filmstudio(request):
-#	collect_statistics(request, "filmstudio")
+	collect_statistics(request, "filmstudio")
 	if 'lang' not in request.session:
 		request.session['lang'] = 'est'
 	flags = []

@@ -24,7 +24,7 @@ from django.urls import reverse
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('index.urls')),
-#    url(r'^statistika', include('statistika.urls')),
+    url(r'^statistika', include('statistika.urls')),
     url(r'^browser', include('browser.urls')),
     url(r'^meist', include('meist.urls')),
     url(r'^hinnasilt', include('hinnasilt.urls')),
