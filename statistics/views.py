@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #from __future__ import unicode_literals
-from django.core.urlresolvers import resolve
+from django.urls import reverse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import statistics_entry
