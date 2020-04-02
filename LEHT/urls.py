@@ -19,6 +19,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import reverse
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
