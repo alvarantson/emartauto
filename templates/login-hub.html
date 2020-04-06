@@ -31,26 +31,42 @@
 				{% endfor %}
 				<h3>Töötajad:</h3>
 				{% for i in workers %}
-				<h4><b>{{ i.name }}</b> - Töök:{{ i.tookoda_priority }} - varuo:{{ i.varuosad_priority }} - kalender:{{ i.kalender_priority }}</h4>
+				<h4><b>{{ i.name }}</b> - Töök:{{ i.tookoda_priority }} - varuo:{{ i.varuosad_priority }} - kalender:{{ i.kalender_priority }} - kalender2:{{ i.kalender2_priority }} - Tooted:{{ i.tooted_priority }}</h4>
 				{% endfor %}
 			</div>
 			{% endif %}
 			<h1>
 				<a href="/"><- esilehele</a><br>
-				<a href="/kalender">kalender - töökoda</a><br>
-				<a href="/kalender2">kalender - toidupood</a><br>
+				{% if request.session.kalender_priority != "M" %}
+				<a href="/kalender">kalender (1) - töökoda</a><br>
+				{% endif %}
+				{% if request.session.kalender2_priority != "M" %}
+				<a href="/kalender2">kalender (2) - toidupood</a><br>
+				{% endif %}
+				{% if request.session.tookoda_priority != "M" %}
 				<a href="/tookoda">tookoda</a><br>
+				{% endif %}
+				{% if request.session.varuosad_priority != "M" %}
 				<a href="/varuosad">varuosad</a><br>
+				{% endif %}
+				
+				
 				<a href="/hinnasilt">hinnasilt</a><br>
 				<a href="/menu">menüü</a><br>
-				<a href="/loader">Lae andmeid sisse</a><br>
+				<br>
+				{% if request.session.tooted_priority != "M" %}
+				<a href="/tootelisamine">Toodete lisamine</a><br>
+				<a href="/tootehaldus">Toodete haldus</a><br>
+				{% endif %}
 				<br>
 				{% if request.user.is_superuser %}
-					<a href="/statistika">statistika</a><br>
+				<a href="/loader">Lae andmeid sisse</a><br>
+				<a href="/statistika">statistika</a><br>
 				{% endif %}
 			</h1>
 
 		</div>
+		{% if request.session.kirjad_priority != "M" %}
 		<div class="col-xs-6 mails">
 			<h3>Kirjad:</h3>
 			{% for i in mails %}
@@ -61,6 +77,7 @@
 			</div>
 			{% endfor %}
 		</div>
+		{% endif %}
 	</div>
 	{% include "navbar/footer.html" %}
 </body>
