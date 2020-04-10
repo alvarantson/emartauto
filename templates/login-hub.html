@@ -23,7 +23,7 @@
 				</div>
 			</a>
 			<a class="item-a" href="/admin">
-				<div class="item logout">ADMINPANEELILE 
+				<div class="item">ADMINPANEELILE 
 					<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
 				</div>
 			</a>
@@ -114,7 +114,7 @@
 
 		</div>
 		<div class="col-xs-12 col-md-4 workers">
-			<br><br>
+			<br>
 			{% if request.user.is_superuser %}
 			<div class="col-xs-12 col-md-12">
 				<h3><b><u>SUPERKASUTAJAD:</u></b></h3>
@@ -124,28 +124,62 @@
 				<br>
 				<h3><b><u>TÖÖTAJAD:</u></b></h3>
 				<br>
-				<table class="col-xs-12">
-					<tr class="main">
-						<th scope="row">#</th>
-						<th>TÖÖK</th>
-						<th>VARU</th>
-						<th>KAL1</th>
-						<th>KAL2</th>
-						<th>TOOTED</th>
-						<th>KIRJAD</th>
-					</tr>
-					{% for i in workers %}
-					<tr>
-						<td scope="row"><b>{{ i.name }}</b></td>
-						<td>{{ i.tookoda_priority }}</td>
-						<td>{{ i.varuosad_priority }}</td>
-						<td>{{ i.kalender_priority }}</td>
-						<td>{{ i.kalender2_priority }}</td>
-						<td>{{ i.tooted_priority }}</td>
-						<td>{{ i.kirjad_priority }}</td>
-					</tr>
-					{% endfor %}
-				</table>
+				<div class="col-xs-12">
+					<table>
+						<tr class="main">
+							<th scope="row">#</th>
+							<th>TÖÖK</th>
+							<th>VARU</th>
+							<th>KAL1</th>
+							<th>KAL2</th>
+							<th>TOOTED</th>
+							<th>KIRJAD</th>
+						</tr>
+						{% for i in workers %}
+						<tr>
+							<td scope="row"><b>{{ i.name }}</b></td>
+							<td>{{ i.tookoda_priority }}</td>
+							<td>{{ i.varuosad_priority }}</td>
+							<td>{{ i.kalender_priority }}</td>
+							<td>{{ i.kalender2_priority }}</td>
+							<td>{{ i.tooted_priority }}</td>
+							<td>{{ i.kirjad_priority }}</td>
+						</tr>
+						{% endfor %}
+					</table>
+				</div>
+				.
+				<a class="item-a" href="/admin/login/worker">
+					<div class="item">HALDA TÖÖTAJAID 
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+					</div>
+				</a>
+				<br>
+				<a target="_blank" class="item-a" href="/admin/index/index_lang">
+					<div class="item unimportant">ESILEHE TÕLKED 
+						<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+					</div>
+				</a>
+				<a target="_blank" class="item-a" href="/admin/foodstore/foodstore_lang">
+					<div class="item unimportant">TOIDUPOE TÕLKED 
+						<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+					</div>
+				</a>
+				<a target="_blank" class="item-a" href="/admin/filmstudio/filmstudio_lang">
+					<div class="item unimportant">FILMISTUUDIO TÕLKED 
+						<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+					</div>
+				</a>
+				<a target="_blank" class="item-a" href="/admin/meist/meist_lang">
+					<div class="item unimportant">MEIST TÕLKED 
+						<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+					</div>
+				</a>
+				<a target="_blank" class="item-a" href="/admin/repair/repair_lang">
+					<div class="item unimportant">TÖÖKOJA TÕLKED 
+						<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+					</div>
+				</a>
 			</div>
 			{% endif %}
 		</div>
@@ -153,7 +187,7 @@
 		<div class="col-xs-12 col-md-5 mails">
 			{% if request.user.is_superuser %}
 			<a class="item-a" href='/admin/meist/contactform'>
-				<div class="email-listing logout">
+				<div class="email-listing">
 					HALDA EMAILE
 					<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 
 				</div>
