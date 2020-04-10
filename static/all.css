@@ -65,7 +65,7 @@ body{
 		text-align: right;
 	}
 	.navbar-desktop__info h3{
-		margin-top: 1.25vh;
+		margin-top: 0.75vh;
 		margin-bottom: 0.75vh;
 	}
 	.navbar-desktop__info h3 sup{
