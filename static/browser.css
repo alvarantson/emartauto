@@ -85,6 +85,11 @@
 .toode__modal div {
 	z-index: 9999999 !important;
 }
+.toode_modal tr,
+.toode_modal table {
+	max-width: 100% !important;
+	overflow-x: hidden;
+}
 .toode__modal {
 	z-index: 99999999 !important;
 }
