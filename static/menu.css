@@ -2,33 +2,51 @@ html {
 	overflow-x: hidden;
 }
 body{
-	font-family: ProximaNova !important;
-	font-weight: 250;
+	font-family: bahnschrift !important;
 	overflow-x: hidden;
 	background-size: 100%;
 	color: white;
 }
-h2 {
-	text-align: center;
-	font-size: 4vw;
+
+h1,
+h2,
+h3 {
+	font-weight: bold;
+	font-size: 5.5vh;
+}
+h1 {
 	color: white;
-	text-decoration: underline;
+	background-color: black;
+	padding: 1vh 3.5vh 0.5vh 3.5vh;
+	margin-bottom: 3vh;
+	margin-top: 3vh;
 }
-
-h3{
-	font-size: 2.5vw;
-	margin-top: 0.25vh; 
+h2 {
+	color: black;
+	margin-top: 0.75vh;
 	margin-bottom: 0;
-}
-
-.left {
 	text-align: right;
+	margin-right: 6vh;
 }
-.right {
+span {
+	float: left;
+}
+.toidud {
 	text-align: left;
 }
-.main {
-	margin-top: 5vh;
-	background-color: rgba(0,0,0,0.4);
-	border-radius: 4vh;
+.toidud h1 {
+	margin-left: 58vh;
+}
+
+
+.joogid {
+	border-left: dashed 0.75vh black;
+}
+.joogid h1 {
+	margin-left: 58vh;
+}
+.col-xs-9,
+.col-xs-3 {
+	padding: 0 0 0 0 !important;
+	margin: 0 0 0 0 !important;
 }
