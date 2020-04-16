@@ -46,6 +46,7 @@ span {
 .joogid {
 	border-left: dashed 0.75vh black;
 }
+.col-xs-12,
 .col-xs-9,
 .col-xs-3 {
 	padding: 0 0 0 0 !important;
