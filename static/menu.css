@@ -61,5 +61,7 @@ h4 {
 	color: white;
 	background-color: black;
 	padding: 1vh 3.5vh 0.5vh 3.5vh;
+	margin-left: 5vh;
+	margin-right: 5vh;
 	width: 100%;
 }
