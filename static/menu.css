@@ -37,16 +37,14 @@ span {
 .toidud {
 	text-align: left;
 }
+.joogid h1,
 .toidud h1 {
-	margin-left: 58vh;
+	margin-left: 50vh;
 }
 
 
 .joogid {
 	border-left: dashed 0.75vh black;
-}
-.joogid h1 {
-	margin-left: 58vh;
 }
 .col-xs-9,
 .col-xs-3 {
