@@ -33,6 +33,7 @@ span {
 }
 .main {
 	height: 100vh;
+	text-align: center;
 }
 .toidud {
 	text-align: left;
@@ -56,5 +57,5 @@ span {
 h4 {
 	position: absolute;
 	bottom: 5px;
-	text-align: center;
+	color: black;
 }
