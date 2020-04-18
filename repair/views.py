@@ -25,7 +25,7 @@ def repair(request):
 			cat = i.item_cat
 			name = i.item_name
 			price = i.item_price
-			menu.objects.get(lang=lang, item_cat=cat, item_name=name, item_price=price).delete()
+			menu.objects.filter(lang=lang, item_cat=cat, item_name=name, item_price=price)[0].delete()
 			menu.objects.create(lang=lang, item_cat=cat[:-1], item_name=name, item_price=price)
 			i = menu.objects.get(lang=lang, item_cat=cat[:-1], item_name=name, item_price=price)
 		asd.append(i)
