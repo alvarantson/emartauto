@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^kalender2', include('kalender2.urls')),
     url(r'^reklaam', include('reklaam.urls')),
     url(r'^menu', include('menu.urls')),
+    url(r'^rmp/', include('rmp.urls')),
     url(r'^repair', include('repair.urls')),
     url(r'^loader', include('loader.urls')),
     url(r'^favicon.ico$',

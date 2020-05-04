@@ -1,0 +1,245 @@
+{% load static %}
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<!-- BOOTSTRAP 3 CDN -->
+<div class="rmp"> 
+  {% for item in links %}
+  <a href="rmp/view/{{ item.link }}/" style="font-size: 2em;">{{ item.name }}</a><br>
+  {% endfor %}
+</div>
+<script type="text/javascript">
+$(".rmp").fadeOut(5);
+$(".loader").fadeOut(5);
+$(".navbar").fadeOut(5);
+function hider() {
+  $(".error").fadeOut();
+  $(".rmp").fadeIn();
+}
+</script>
+  <title>Page not found at /rmp</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style type="text/css">
+    .error { padding:0 0 0 0; }
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; color:#000; }
+    body>div { border-bottom:1px solid #ddd;}
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; background-color: rgba(0,0,0,0)}
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; padding: 0.5em 1em; }
+    #explanation { background:#eee; border-bottom: 0px none; padding: 0.5em 1em;}
+  </style>
+
+<div class="error">
+  <div id="summary">
+    <h1>Page not found <span>
+      {% if auth == "y" %}
+      <a onclick="hider()" style="color: black; text-decoration: none;">(404)</a>
+      {% else %}
+      (404)
+      {% endif %}
+    </span></h1>
+    <table class="meta">
+      <tbody><tr>
+        <th>Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Request URL:</th>
+        <td>http://127.0.0.1:8000/asdasd</td>
+      </tr>
+      
+    </tbody></table>
+  </div>
+  <div id="info">
+    
+      <p>
+      Using the URLconf defined in <code>LEHT.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+                ^admin/
+                
+            
+          </li>
+        
+          <li>
+            
+                ^
+                
+            
+                ^$
+                
+            
+          </li>
+        
+          <li>
+            
+                ^kokkuvote
+                
+            
+          </li>
+        
+          <li>
+            
+                ^statistika
+                
+            
+          </li>
+        
+          <li>
+            
+                ^tootelisamine
+                
+            
+          </li>
+        
+          <li>
+            
+                ^tootehaldus
+                
+            
+          </li>
+        
+          <li>
+            
+                ^browser
+                
+            
+          </li>
+        
+          <li>
+            
+                ^meist
+                
+            
+          </li>
+        
+          <li>
+            
+                ^hinnasilt
+                
+            
+          </li>
+        
+          <li>
+            
+                ^login
+                
+            
+          </li>
+        
+          <li>
+            
+                ^tookoda
+                
+            
+          </li>
+        
+          <li>
+            
+                ^foodstore
+                
+            
+          </li>
+        
+          <li>
+            
+                ^filmstudio
+                
+            
+          </li>
+        
+          <li>
+            
+                ^varuosad
+                
+            
+          </li>
+        
+          <li>
+            
+                ^kalender
+                
+            
+          </li>
+        
+          <li>
+            
+                ^kalender2
+                
+            
+          </li>
+        
+          <li>
+            
+                ^reklaam
+                
+            
+          </li>
+        
+          <li>
+            
+                ^menu
+                
+            
+          </li>
+        
+          <li>
+            
+                ^repair
+                
+            
+          </li>
+        
+          <li>
+            
+                ^loader
+                
+            
+          </li>
+        
+          <li>
+            
+                ^favicon.ico$
+                [name='favicon']
+            
+          </li>
+        
+          <li>
+            
+                ^i/(?P&lt;path&gt;.*)$
+                
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+        The current path, <code>rmp</code>, didn't match any of these.
+      </p>
+    
+  </div>
+
+  <div id="explanation">
+    <p>
+      You're seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </div>
+
+
+</div>

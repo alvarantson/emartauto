@@ -12,6 +12,7 @@ def is_worker(request):
 		request.session['tookoda_priority'] = worker.objects.get(name=request.session['worker']).tookoda_priority
 		request.session['tooted_priority'] = worker.objects.get(name=request.session['worker']).tooted_priority
 		request.session['kirjad_priority'] = worker.objects.get(name=request.session['worker']).kirjad_priority
+		request.session['rmp_priority'] = worker.objects.get(name=request.session['worker']).rmp_priority
 	except:
 		return HttpResponseRedirect('/login') #INDEX\i puhul '/'
 	finally:
@@ -22,6 +23,7 @@ def is_worker(request):
 			request.session['tookoda_priority'] = "K"
 			request.session['tooted_priority'] = "K"
 			request.session['kirjad_priority'] = "K"
+			request.session['rmp_priority'] = "K"
 			request.session["worker"] = "admin"
 
 

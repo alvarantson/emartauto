@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'tootelisamine',
     'statistika',
     'reklaam',
+    'rmp',
     'hinnasilt',
     'login',
     'tookoda',
