@@ -14,7 +14,8 @@ def rmp(request):
 		{"name": "KUUSALU 2020", "link": "1Sk3HGPfs786UnDftRo5Aby1izg9POvLQ6qe6ZwIMGrE"},
 		{"name": "HAMBURGER 2020", "link": "1WwRI6B5yYPAMrtMyDc70ihF3RLi2rTknjXC8WqeB6vs"},
 		{"name": "EMART AUTO 2020", "link": "13-p3KhBsqOGTPWCdij18R8x-aBJiezDweVXT_kEFElM"},
-		{"name": "AUTOPOOD 2020", "link": "1rFAjFjZLvfO2LEIiVNMfD2bKQ8bpgSwsGg4UC8OJbMI"}
+		{"name": "AUTOPOOD 2020", "link": "1rFAjFjZLvfO2LEIiVNMfD2bKQ8bpgSwsGg4UC8OJbMI"},
+		{"name": "uus dokument", "link": "1oVqKu1NyGbplMXAnMkkWU0oRW2OysVYMQ7K922i7NKA"}
 		]
 
 	return render(request, "rmp.html", {
